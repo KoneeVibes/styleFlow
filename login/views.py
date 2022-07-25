@@ -7,7 +7,8 @@ def login(request):
         form = logindetails(request.POST)
         if form.is_valid():
             form.save()
+            login(request)
             return redirect('home')
     else:
-        form = logindetails(initial={'username':request.user.username, 'email':request.user.email})
+        form = logindetails(initial={'username':request.user.username})
     return render(request, 'login/login.html', {'form': form})
