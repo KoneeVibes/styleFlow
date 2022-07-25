@@ -1,11 +1,10 @@
-from dataclasses import field, fields
-from .models import logindetails
 from django.forms import ModelForm
+from django.contrib.auth.models import User
 
 
 class logindetails(ModelForm):
     class Meta:
-        model = logindetails
-        fields = '__all__'
+        model = User
+        fields = ['username', 'password']
 
     
