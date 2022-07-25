@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>styleFlow</title>
+    <link rel="stylesheet" href="/static/signup/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+</head>
+<body>
+    <div id="left">
+        <h1>Lorem, ipsum dolor. <br> Lorem, ipsum dolor.</h1>
+        <p class="left">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <p class="left">Lorem ipsum dolor, sit amet consectetur adipisicing. </p> 
+        <p class="left"> Lorem, ipsum dolor.</p>
+    </div>
+    <div id="right">
+        <div id="topright">
+            <h4>Lorem, ipsum dolor sit amet consectetur.</h4>
+        </div>
+        
+        <form method="post" id="bottomright">
+            <table>
+                {{ form.as_p }}
+            </table>
+            {% csrf_token %}
+            <input type="submit" name="value" id="value" value="Sign Up">
+            <p class="detail">By clicking the button, you are agreeing to our <span class="name"> Terms and Services </span> </p>
+        </form>
+    </div>
+</body>
+</html>
