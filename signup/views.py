@@ -11,7 +11,7 @@ def signup(request):
 
         if form.is_valid():
             form.save()  
-            return redirect('login')
+            return redirect('home')
     else:
-        form = SignUpForm(initial={'email':'@gmail.com'}) 
+        form = SignUpForm(initial={'email':'@gmail.com', 'username':request.user.username}) 
     return render(request, 'signup/index.html', {'form': form})
