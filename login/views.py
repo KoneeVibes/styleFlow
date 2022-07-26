@@ -1,14 +1,15 @@
 from django.shortcuts import redirect, render
 from .forms import logindetails
+from django.contrib.auth import login
 
 
-def login(request):
+def signin(request):
     if request.method == 'POST':  
         form = logindetails(request.POST)
         if form.is_valid():
-            form.save()
-            login(request)
-            return redirect('home')
+            user = form.save()
+            login(request, user)
+            return redirect('signup')
     else:
-        form = logindetails(initial={'username':request.user.username})
+        form = logindetails()
     return render(request, 'login/login.html', {'form': form})
