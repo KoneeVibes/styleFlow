@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from .models import user
+from .models import user as user
 from django.contrib.auth.hashers import make_password
 from django.utils.translation import gettext as _
 
