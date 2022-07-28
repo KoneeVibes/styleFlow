@@ -1,8 +1,8 @@
-from django.http import HttpResponse
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect
 from django.contrib.auth import logout
 
-def logout(request):
+
+def signout(request):
     logout(request)
-    return HttpResponse("That's it, Bye!")
+    return redirect('login')
 
