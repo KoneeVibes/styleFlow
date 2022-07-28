@@ -13,11 +13,12 @@
         {% endfor %}
     {% endif %}
     <form method="post">
-            <table>
-                {{ form }}
-            </table>
-            {% csrf_token %}
-            <input type="submit" value="Login">
-        </form>
+        <table>
+            {{ form }}
+        </table>
+        {% csrf_token %}
+        <input type="submit" value="Login">
+    </form>
+        <button><a href="{% url 'signup' %}">Sign Up</a></button>
 </body>
 </html>
