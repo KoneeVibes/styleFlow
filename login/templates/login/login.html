@@ -7,6 +7,11 @@
     <title>styleFlow</title>
 </head>
 <body>
+    {% if messages %}
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    {% endif %}
     <form method="post">
             <table>
                 {{ form }}

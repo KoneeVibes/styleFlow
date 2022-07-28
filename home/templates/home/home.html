@@ -10,5 +10,6 @@
     <p>welcome {{ username }},</p>
     {% csrf_token %}
     <p>This is a tentative homepage</p>
+    <button><a href="{% url 'signout' %}">Log Out</a></button>
 </body>
 </html>
