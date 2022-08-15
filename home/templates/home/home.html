@@ -1,15 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>styleFlow</title>
-</head>
-<body>
-    <p>welcome {{ username }},</p>
-    {% csrf_token %}
-    <p>This is a tentative homepage</p>
-    <button><a href="{% url 'signout' %}">Log Out</a></button>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}styleflow{% endblock %}
+
+{% block content %}
+
+    <div class="outer-side">
+       <!-- outer side space -->
+    </div>
+
+    <div class="left">
+        <h3>INTRODUCTION</h3>
+        <h3>TUTORIAL</h3>
+        <h3>HOW-TO-GUIDE</h3>
+        <h3>TECHNICAL REFERENCE</h3>
+        <h3>BACKGROUND</h3>
+    </div>
+
+    <div class="right">
+
+        <div class="grid-container">
+
+            <section>
+                <h3 class="center-text">TUTORIAL</h3>
+                <h4>Animate a string to move-up:</h4>
+                <p>Add the class "move-up" to the h1 tag to animate the enclosed string</p>
+                <table class="terminal">
+                    <tr>
+                        <th>Input</th>
+                        <th>Output</th>
+                    </tr>
+                    <tr>
+                        <td class="input">
+                            <p>&lt;!-- enter class below --&gt;</p>
+                            <span>
+                                &lt;h1
+                                <input type="text" value='class = "move-up"' name="move-up"  size="12">
+                                &gt; I just moved up &lt;&#x2215;h1&gt;
+                            </span>
+                            <p>&lt;!-- enter class above --&gt;</p>
+                            <button class="button"><h4>RUN</h4></button> 
+                        </td>
+                        <td class="move-up">
+                            <!-- screen will display code result -->
+                        </td>
+                    </tr>
+                </table>
+
+            </section>
+
+            <section>        
+                <h4>Animate a string to move-down:</h4>
+                <p>Add the class "move-down" to the h1 tag to animate the enclosed string</p>
+
+                <table class="terminal">
+                    <tr>
+                        <th>Input</th>
+                        <th>Output</th>
+                    </tr>
+                    <tr>
+                        <td class="input">
+                            <p>&lt;!-- enter class below --&gt;</p>
+                            <span>
+                                &lt;h1
+                                <input type="text" value='class = "move-down' name="move-down" size="14">
+                                &gt; I just moved move-down &lt;&#x2215;h1&gt;
+                            </span>
+                            <p>&lt;!-- enter class above --&gt;</p>
+                            <button  class="button"><h4>RUN</h4></button> 
+                        </td>
+                        <td class="move-down">
+                            <!-- screen will display code result -->
+                        </td>
+                    </tr>
+                </table>
+
+            </section>
+        </div>
+
+    </div>
+    
+    <div class="outer-side">
+        <!-- outer side space -->
+    </div>
+    
+{% endblock %}  
+
+{% block js_block %}
+
+    <script type="text/javascript" src="{% static 'js/documentation.js' %}"></script>
+
+{% endblock %}

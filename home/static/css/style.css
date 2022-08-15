@@ -1,0 +1,73 @@
+html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+body{
+    background-color: #FFFFFF;
+    display: flex;
+}
+
+.outer-side{
+    flex: 5%;
+}
+
+.left{
+    flex: 20%;
+    margin: 4px 8px;
+    padding: 16px;
+    background-color: #E8D2F1;
+    height: 100rem;
+    /* position: ;   there is more code to be included in this style */   
+}
+
+.right{
+    flex: 70%;
+    margin: 4px 8px;
+    padding: 16px;
+    border: 1px outset #FFFFFF;
+}
+
+.grid-container{
+    display: grid;
+    row-gap: 32px;
+}
+
+h3{
+    color: #9E45C6;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 16px;
+    margin-right: 4px;
+}
+
+.input{
+    width: 40%;
+}
+
+.screen{
+    width: 60%;
+    text-align: center;
+}
+
+.terminal{
+    width: 98.5%;
+}
+
+.button{
+    background-color: #8B20BB;
+    height: 53px;
+    width: 256px;
+    left: 20px;
+    top: 20px;
+    border-radius: 4px;
+    padding: 12px, 20px, 12px, 20px;
+    color: white;
+}
+
+.center-text{
+    text-align: center;
+}
